@@ -1,3 +1,4 @@
+using IniciandoComAspNetCore.Extensions;
 using IniciandoComAspNetCore.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -42,7 +43,8 @@ namespace IniciandoComAspNetCore
 
             app.UseAuthorization();
 
-            app.UseMiddleware<MeuMiddleware>();
+            //app.UseMiddleware<MeuMiddleware>();
+            app.UseMeuMiddleware();
 
             app.UseEndpoints(endpoints =>
             {
